@@ -1,4 +1,4 @@
-# Introduction to DIALS, mdx2, NeXpy
+# Introduction to DIALS, Mdx2, NeXpy
 ### Tailored to users who aim to model inorganic materials using crystallographic software
 
 <details>

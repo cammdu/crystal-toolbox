@@ -4,14 +4,14 @@ This Toolbox contains several tutorials in order to provide comprehensive instru
 
 There are X tutorials, and should be followed in this order:
 1. Installation 
-2. Pre_Processing
-  a. navigating the h5 file
-  b. accessing the dataset in h5 file
-  c. adding correct metadata to file
-  c. converting the data to .cbf
+2. Pre_Processing:
+- navigating the h5 file
+- accessing the dataset in h5 file
+- adding correct metadata to file
+-  converting the data to .cbf
 3. Xds & Meerkat
 4. Reconstructing in xds & Meerkat
-  a. reconstruction code + showing code
+-  reconstruction code + showing code
 5. DIALS
 6. Mdx2
 7. NeXpy

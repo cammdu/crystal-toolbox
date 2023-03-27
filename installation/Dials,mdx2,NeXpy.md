@@ -1,4 +1,4 @@
-# Introduction to DIALS, mdx2, nexpy and cctbx
+# Introduction to DIALS, mdx2, NeXpy
 ### Tailored to users who aim to model inorganic materials using crystallographic software
 
 <details>
@@ -7,6 +7,7 @@ DIALS is documented on the DIALS github (link). DIALS is software used for index
   
   ```
 conda install -c conda-forge dials
+conda install dxtbx/n # to read image headers 
 ```
 
 </details>
@@ -31,14 +32,14 @@ This should output the installed version of mdx2.
 
 <details>
 <summary> NeXpy </summary>
+NeXpy is the GUI that accompanies Mdx2. NeXpy should be installed in a second environment running on python 3.9 (or the last stable release). NeXpy only processes files in a NexusFormat structure (.nxs). Hierarchal data formats such as .h5 can be converted to the NexusFormat using this (link) script
+NeXpy can be installed using conda:
 
-'''ff'''
-
+   ```
+conda install -c conda-forge nexpy
+conda install scipy  
+``` 
+  
 </details>
 
-<details>
-<summary> cctbx </summary>
 
-'''ff'''
-
-</details>

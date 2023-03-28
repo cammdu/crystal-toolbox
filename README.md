@@ -17,8 +17,9 @@ There are 8 tutorials and 7 sub-tutorials, and should be followed in this order:
 6. Making a mask in Python and applying it to the dataset
 7. Mdx2
 - NeXpy
-- Making a mask in Mdx2 and applying it to the dataset
 - Plotting rocking curves
+- Making a mask in Mdx2 and applying it to the dataset
+  - Dividing reciprocal space into voxels
 8. Altering .h5 files to NexusFormat
 
   

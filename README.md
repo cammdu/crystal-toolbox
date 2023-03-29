@@ -5,6 +5,8 @@ This toolbox contains several tutorials in order to provide comprehensive instru
 There are 8 tutorials and 7 sub-tutorials, and should be followed in this order:
 
 1. Installation 
+- DIALS, Mdx2, NeXpy
+- Meerkat & XDS
 2. Pre_Processing:
 - navigating the h5 file
 - accessing the dataset in h5 file

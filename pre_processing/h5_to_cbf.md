@@ -29,4 +29,16 @@ for image_num in range(0, len(data)):
     image_num = the_length + image_num
     image.write('images/folder_name/file_name_%05i.cbf' %image_num)
 ```
-Now your data should be saved in a folder called **folder_name** in the format of file_name_00000.cbf. This padding with zeroes is necessary as xds requires it to process the data. 
+Now your data should be saved in a folder called **folder_name** in the format of **file_name_00000.cbf**. This padding with zeroes is necessary as xds requires it to process the data. 
+
+### Method 2:
+- in your command line, run the following command:
+ ```
+python ./eiger2cbf_corr.py -d X -b X -w 0.2776 --omega "0.X*index" -o 'cbf2/file_name{index:04d}.cbf' data_set.h5
+```
+in which the X behind:
+- d is the distance to the crystal
+- b is the centre of the detector (needs two coordinates, X and Y)
+- w is the wavelength 
+- omega is the changing angle frame to frame
+- o is the output flag

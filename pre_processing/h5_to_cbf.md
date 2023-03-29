@@ -42,3 +42,5 @@ in which the X behind:
 - w is the wavelength 
 - omega is the changing angle frame to frame
 - o is the output flag
+
+Now you have a folder containing all of your data with the correct metadata and file format. 

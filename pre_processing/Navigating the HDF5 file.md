@@ -33,4 +33,17 @@ x = h5py.File('path/to/your/file/your_file_name.h5', 'r')
 print(x.keys())
 
 ```
-5. 
+5. from here, loop through every group & sub group with a simple for loop until you have found your dataset. 
+
+6. Once you have found your dataset, access it as follows:
+```
+data = x['entry/path/to/dataset/dataset']
+
+```
+7. Check if accessing was successful by portraying a frame using matplotlib:
+```
+plt.imshow(data[0], clim=[input your colour limits])
+plt.show()
+
+```
+Now you have successfully accessed your data and you can proceed to the next tutorial. 

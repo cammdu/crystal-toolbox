@@ -35,3 +35,13 @@ dials.index xds_models.expt strong.refl
 ```
 - this will output a table providing unit cell parameters, show the percentage of indexed peaks and other useful information. 
 - To be rigorous, make sure that the output here provides similar parameters to xds. 
+- output files are: indexed.expt and indexed.refl 
+
+6. If needed, DIALS has a refine function which can improve spot predictions, and can be ran as:
+```
+dials.refine indexed.expt indexed.refl 
+```
+7. An excellent feature of DIALS is the report html it can produce. This report contains many charts and summarises information from the previous steps.
+dials.report refined.expt refined.refl
+
+Note that DIALS can perform many more tasks and is not restricted to these commands. 

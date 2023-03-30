@@ -20,3 +20,18 @@ dials.import_xds 'xds_folder_name'
 dials.show xds_models.expt
 dials.image_viewer xds_models.expt 
 ```
+3. If you are interested to see how the data looks in reciprocal space without processing, you can use:
+```
+dials.reciprocal_space_viewer
+```
+4. For peak detection, either before or after making a mask, use:
+```
+dials.find_spots xds_models.expt 
+```
+which will output the strong reflections (strong.refl)
+5. To assign a Miller index to every found spot, use the index function:
+```
+dials.index xds_models.expt strong.refl 
+```
+- this will output a table providing unit cell parameters, show the percentage of indexed peaks and other useful information. 
+- To be rigorous, make sure that the output here provides similar parameters to xds. 

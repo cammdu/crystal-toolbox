@@ -1,7 +1,8 @@
 # crystal-toolbox
-## documentation for tools used to perform crystallographic analysis on single crystal X-ray diffraction data (XRD).
+## documentation for crystallographic analysis on single crystal X-ray diffraction data (XRD).
 
 - This toolbox contains several tutorials in order to provide comprehensive instructions regarding inorganic material analysis, including but not limited to peak finding, scaling, indexing, reciprocal space plotting, error and correction plotting and cross analyses. 
+- Software used includes: DIALS, mdx2, xds, meerkat, NeXpy, ALBULA
 
 
 There are 8 tutorials and 7 sub-tutorials, and should be followed in this order:

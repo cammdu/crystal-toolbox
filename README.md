@@ -1,6 +1,8 @@
 # crystal-toolbox
-contains documentation for tools used to perform crystallographic analysis on single crystal X-ray diffraction data (XRD)
-This toolbox contains several tutorials in order to provide comprehensive instructions regarding inorganic material analysis, including but not limited to peak finding, scaling, indexing, reciprocal space plotting, error and correction plotting and cross analyses. 
+## documentation for tools used to perform crystallographic analysis on single crystal X-ray diffraction data (XRD).
+
+- This toolbox contains several tutorials in order to provide comprehensive instructions regarding inorganic material analysis, including but not limited to peak finding, scaling, indexing, reciprocal space plotting, error and correction plotting and cross analyses. 
+
 
 There are 8 tutorials and 7 sub-tutorials, and should be followed in this order:
 

@@ -1,4 +1,5 @@
 # meerkat 
+## meerkat reconstruction
 - meerkat performs reciprocal space reconstruction based on the orientation matrix provided by xds. 
 - meerkat requires XPARM.XDS from xds as well as the cbf image dataset. 
 1. In a new python file, import reconstruct_data:
@@ -7,7 +8,7 @@ from meerkat import reconstruct data
 ```
 3. The reconstruction can be ran by using the script bellow, written by Arkadiy Simonov (slightly adapted):
 ```
-#reconstruct dataset
+
 reconstruct_data(filename_template='../frames/file_name_%05i.cbf',
         first_image=1,
         last_image=XXXX,
@@ -21,4 +22,24 @@ reconstruct_data(filename_template='../frames/file_name_%05i.cbf',
         size_of_cache=100,
         override=True)
 ```
-- where XXXX is the last image number (usually 3600 if 360 degrees were measured)
+- where XXXX is the last image number (usually 3600/3599 if 360 degrees were measured)
+- note that this reconstruction is computationally expensive and will take some time. 
+
+## meerkat show plot
+- above, reconstruction.h5 was made, to view the reciprocal space reconstruction:
+1. make a show_data python file
+2. import the following:
+```
+import h5py
+import matplotlib.pyplot as plt
+import math
+import numpy as np
+```
+3. using matplotlib and the created h5 file, show the plot:
+```
+inp = h5py.File('reconstruction.h5','r') # to read the file
+data = inp['data']
+plt.imshow(data[400],clim=[0,40]) #these can be changed to fit your data
+plt.show()
+```
+- your reciprocal space reconstruction should be shown now. 

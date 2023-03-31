@@ -1,7 +1,8 @@
 # meerkat 
-## meerkat reconstruction
 - meerkat performs reciprocal space reconstruction based on the orientation matrix provided by xds. 
 - meerkat requires XPARM.XDS from xds as well as the cbf image dataset. 
+## meerkat reconstruction
+
 1. In a new python file, import reconstruct_data:
 ```
 from meerkat import reconstruct data

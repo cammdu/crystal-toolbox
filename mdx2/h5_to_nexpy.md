@@ -32,10 +32,12 @@ def make_grid(lower_limit, step, N):
     return lower_limit+step*arange(N)
 ```
 6. Create your signal axes as follows:
+
+```
 rangex, rangey, rangez = [make_grid(ll[i], st[i], meerkat_reconstruction.shape[i]) for i in range(3)]
 
 nxdata.create_dataset('axis0', data=rangex)
 nxdata.create_dataset('axis1', data=rangey)
 nxdata.create_dataset('axis2', data=rangez)
-
+```
 7. open the .h5 file in NeXpy, double-click on signal and manually enter axis0, axis1 and axis2

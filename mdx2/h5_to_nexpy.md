@@ -1,4 +1,5 @@
 # To View the Mask Made in Python in the NeXpy GUI Follow the Steps Below:
+both h5 files and nexus format files are organised in a hierarchal structure. However the formats are still not compatible. As is seen in the geometry tutorial, mdx2 is in a tree format (single file to many file) whereas h5 can have multiple trees. As their formats are not compatible, the following method should be followed to convert the h5 mask to nexus format.
 
 1. import the following packages:
 ```

@@ -12,7 +12,7 @@ nexpy
 ```
 This should open an app. 
 
-Import the following dependencies:
+Import the following dependencies in an IDE/ python to plot the corrections:
 ```
 import numpy as np
 

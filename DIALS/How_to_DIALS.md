@@ -44,7 +44,7 @@ dials.refine indexed.expt indexed.refl
 7. An excellent feature of DIALS is the report html it can produce. This report contains many charts and summarises information from the previous steps.
 dials.report refined.expt refined.refl
 
-##### If DIALS has indexed your data with the wrong space group (can check this easily in the report):
+### If DIALS has indexed your data with the wrong space group (can check this easily in the report):
 1. Be aware which space group you are expecting.
 2. Refine your Bravais Settings:
 ```

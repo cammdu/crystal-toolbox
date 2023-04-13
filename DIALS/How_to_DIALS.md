@@ -64,5 +64,17 @@ dials.reindex indexed.refl change_of_basis_op= CB_OP
 
 4. from here you can continue processing as shown above (start with refining)
 
-
+### Observe refined.expt:
+- Before importing refined.expt in mdx2, it is important to open the file and check that **exposure time** is greater than 0.
+- Ensuring this now is significant to prevent an infinity error when integrating
+-   If you are processing the full 360 degrees of your data there will be approximately 3600 different exposure times. If these are all set to zero, then run a simple for loop such that:
+```
+exposure_time= [A]
+print(len(exposure_time))
+for i in range (len(exposure_time)):
+    print('0.X,')
+```
+- where A is the list of 0.0 exposure times from refined.expt
+- where X is any non zero integer
+- then replace the exposure time list from refined.expt with the outputted list from python.
 Note that DIALS can perform many more tasks and is not restricted to these commands. 

@@ -22,7 +22,7 @@ dials.image_viewer xds_models.expt
 ```
 3. If you are interested to see how the data looks in reciprocal space without processing, you can use:
 ```
-dials.reciprocal_space_viewer
+dials.reciprocal_space_viewer xds_models.expt
 ```
 4. For peak detection, either before or after making a mask, use:
 ```

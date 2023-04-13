@@ -1,5 +1,5 @@
 # Viewing the Geometry of your Experiment in NeXpy
-## Adapted from the mdx2 tutorials of the erice 2022 data reduction workshop
+## Adapted from the mdx2 tutorials of the erice 2022 data reduction workshop (link to page)
 ### To run this tutorial, make sure you have produced 'refined.expt' from the How_to_DIALS.md tutorial. 
 
 - mdx2 is a powerful tool used to process x-ray diffraction data and is used in parallel with DIALS.

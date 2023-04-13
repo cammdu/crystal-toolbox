@@ -32,4 +32,6 @@ in your terminal.
 - In NeXpy find: **open --> data.nxs**
 - please note that data.nxs is a very large file (>3gb). Therefore it is recommended that inspecting data.nxs is only done on a device with adequate space.
 
+4. It is possible to inspect whether there is any diffuse scattering available in your data using **data.nxs** 
+- You can use matplotlib to plot a strong peak (not a hot pixel).  
 // tutorial not finished yet

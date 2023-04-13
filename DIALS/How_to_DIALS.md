@@ -44,4 +44,25 @@ dials.refine indexed.expt indexed.refl
 7. An excellent feature of DIALS is the report html it can produce. This report contains many charts and summarises information from the previous steps.
 dials.report refined.expt refined.refl
 
+##### If DIALS has indexed your data with the wrong space group (can check this easily in the report):
+1. Be aware which space group you are expecting.
+2. Refine your Bravais Settings:
+```
+dials.refine_bravais_settings indexed.expt indexed.refl 
+```
+- this will output a table with multiple Bravais settings. 
+- In this table, the solutions with the smallest value of metric fit will be preceded by * to show which solutions the algorithm recommends. 
+- It is significant to familiarise yourself with the presented space group options so that you can make your decision. 
+- the last column of the table contains the change of basis operations; how to go from the P1 to your chosen space group. 
+
+3. Use the following function to apply your change of basis operation:
+```
+dials.reindex indexed.refl change_of_basis_op= CB_OP
+```
+- where CB_OP should be substituted by the change of basis operation for your chosen space group. 
+- this will output a reindexed.refl
+
+4. from here you can continue processing as shown above (start with refining)
+
+
 Note that DIALS can perform many more tasks and is not restricted to these commands. 

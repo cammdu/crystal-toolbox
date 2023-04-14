@@ -10,8 +10,20 @@
 mdx2.integrate geometry.nxs data.nxs --mask mask.nxs --subdivide X X X
 ```
 - where X is a subsection, 1 is the default (very manageable for a computer and fairly fast running time), and 10 is a very refined option but will take much longer. 
+2. Plotting an intensity histogram
+- first try this command:
+```
+df['intensity'].plot.hist(bins=20)
+```
+- If this outputs a histogram then move on to step 3. 
+- Else:
+```
+df[(df['intensity']<MAX_NON_HOT_INTENSITY)].plot.hist(column='intensity', bins=30);
+```
+- where MAX_NON_HOT_INTENSITY can be computed by making a scatterplot of your current intensities. It should be the highest intensity on the plot which is not a hot pixel
+- this second function is needed when the masks made by DIALS and mdx2 have not properly masked the hot pixels in your dataset. 
 
-2. To produce an hkl table after integration:
+3. To produce an hkl table after integration:
 - this step is not necessary but highly recommended to view if your exposure times are non-zero. If they are zero, then you will encounter a divide by zero error when correcting the integration as the intensity is calculated by using the count rate. 
 The table can be produced as follows:
 - import the necessary packages:

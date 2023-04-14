@@ -1,6 +1,7 @@
 # Viewing the Geometry of your Experiment in NeXpy
 ## Adapted from the mdx2 tutorials of the erice 2022 data reduction workshop (link to page)
 ### To run this tutorial, make sure you have produced 'refined.expt' from the How_to_DIALS.md tutorial. 
+#### relevant for all mdx2 tutorials: every mdx2 function has a help attribute. Type --help behind the function and it will explain parameters and specifications.
 
 - mdx2 is a powerful tool used to process x-ray diffraction data and is used in parallel with DIALS.
 - NeXpy is the graphical user interface of mdx2 and allows the user to view geometry factors such as solid angle as well as generated reciprocal space plots etc.

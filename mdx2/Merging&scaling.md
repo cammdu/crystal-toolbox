@@ -29,10 +29,27 @@ mdx2.scale corrected.nxs
 #import packages
 from mdx2.utils import loadobj
 
-# make your object
-table3 = loadobj('corrected.nxs','hkl_table')
-
-# find the number of times every h,k,l is observed
-c = tab.to_frame().groupby(['h','k','l'])['phi'].count().value_counts().sort_index()
-c[c>1000].plot.bar();
+Model = loadobj('scales.nxs','scaling_model')
+Model.to_nexus().plot()
 ```
+- this will output a plot of your model. 
+
+## 2D Slice
+1. Apply your model to your merged data:
+```
+mdx2.merge corrected.nxs --scale scales.nxs
+```
+- this will output **merged.nxs**
+
+2. Now map the l=0 slice of the merged and scaled data
+
+```
+mdx2.map geometry.nxs merged.nxs --limits hx hy kx ky 0 0 --outfile slice.nxs
+```
+3. Inspect **slice.nxs** in NeXpy
+## 3D Reconstruction
+1. Use the map function above and change the lx and ly to encompass the whole l range.  
+```
+mdx2.map geometry.nxs merged.nxs --limits hx hy kx ky lx ly --outfile map.nxs
+```
+2. Inspect the 3D reconstruction in NeXpy

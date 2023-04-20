@@ -13,7 +13,7 @@
 - if this operation fails, run:
 ```
 % cp SPOT.XDS SPOT.XDS_bak 
-% head-n XXXX SPOT.XDS_bak > SPOT.XDS
+% head -n XXXX SPOT.XDS_bak > SPOT.XDS
 % xds
 ```
 - where XXXX is the number of Bragg peaks to be displayed. 

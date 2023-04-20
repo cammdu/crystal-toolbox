@@ -59,7 +59,7 @@ mdx2.find_peaks geometry.nxs data.nxs --count_threshold X
 - The sigma cutoff is therefore a number of standard deviations from the mean electron density. 
 - If your data is high quality, a lower sigma cutoff value should be used as this sigma cutoff determines the sizes of the spots which make the mask: i.e. a large sigma cutoff (3) masks much more of your data than a low sigma cutoff (0.5). 
 ```
-mdx2.find_peaks geometry.nxs data.nxs --sigma_cutoff X.Y
+mdx2.mask_peaks geometry.nxs data.nxs --sigma_cutoff X.Y
 ```
 - where X.Y is your chosen sigma cutoff value
 - this will output **mask.nxs**, if you open this in NeXpy, you can visualise what a mask looks like for your data. 

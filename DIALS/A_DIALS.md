@@ -77,7 +77,7 @@ dials.refine indexed.expt indexed.refl
 dials.report refined.expt refined.refl
 ```
 
-### If DIALS has indexed your data with the wrong space group (can check this easily in the report):
+### If DIALS has indexed your data with the wrong space group but you have an expected number of spots (no need for this if you followed 5b-f:
 1. Be aware which space group you are expecting.
 2. Refine your Bravais Settings:
 ```

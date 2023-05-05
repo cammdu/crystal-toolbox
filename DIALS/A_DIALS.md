@@ -7,11 +7,11 @@
 ```
 dials.version
 ```
-This should print the current version. 
+- This should print the current version. 
 
 1. Import the folder containing the cbf images (in pre_processed) using:
 ```
-dials.import_xds 'xds_folder_name'
+dials.import_xds ../xds_
 ```
 - This should output xds_models.expt
 

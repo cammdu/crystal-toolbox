@@ -108,6 +108,7 @@ for i in range (len(exposure_time)):
     print('0.X,')
 ```
 - where A is the list of 0.0 exposure times from refined.expt
-- where X is any non zero integer
+- where X is any non zero integer. The exposure time should have been recorded in your experimental parameters.
 - then replace the exposure time list from refined.expt with the outputted list from python.
+
 Note that DIALS can perform many more tasks and is not restricted to these commands. 

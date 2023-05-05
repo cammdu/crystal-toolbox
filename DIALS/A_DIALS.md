@@ -20,10 +20,11 @@ dials.import_xds ../xds_
 dials.show xds_models.expt
 dials.image_viewer xds_models.expt 
 ```
-3. If you are interested to see how the data looks in reciprocal space without processing, you can use:
+3. To see how the data looks in reciprocal space without processing, you can use:
 ```
 dials.reciprocal_space_viewer xds_models.expt
 ```
+- If the reciprocal space appears very crowded and you cannot make out the expected reciprocal space lattice, then pay special attention to the space group provided in step 5. 
 4. For peak detection, either before or after making a mask, use:
 ```
 dials.find_spots xds_models.expt 
@@ -36,11 +37,39 @@ dials.index xds_models.expt strong.refl
 - this will output a table providing unit cell parameters, show the percentage of indexed peaks and other useful information. 
 - To be rigorous, make sure that the output here provides similar parameters to xds. 
 - output files are: indexed.expt and indexed.refl 
+- If the space group provided after indexing is still P1, then follow the sub steps below. If the space group is in accordance with your crystal, move on to refinement in step 6. 
+5b. To determine appropriate space group options refine the bravais lattice settings:
+```
+dials.refine_bravais_settings indexed.expt indexed.refl 
+```
+- this will output a table of chiral space groups which correspond to bravais lattice space groups. Choose your chosen bravais setting based on the unit cell and the expected space group. 
 
+5c. Then reindex your data again according to your chosen space group and solution:
+```
+dials.reindex bravais_setting_22.expt space_group=P422
+```
+- where you can replace P422 with whichever space group you have. 
+- this will output reindexed.expt and reindexed.refl
+
+5d. Now index your reindexed data with the strong reflections found in step 5. 
+```
+dials.index reindexed.expt strong.refl
+```
+-this will output indexed.expt and indexed.refl 
+
+5e. Now that you have a proper indexing you can refine the bravais settings again (with different solutions) if needed:
+```
+dials.refine_bravais_settings indexed.expt indexed.refl
+```
+5f. Then refine again if needed:
+```
+dials.refine indexed.expt indexed.refl 
+```
 6. If needed, DIALS has a refine function which can improve spot predictions, and can be ran as:
 ```
 dials.refine indexed.expt indexed.refl 
 ```
+X1: 
 7. An excellent feature of DIALS is the report html it can produce. This report contains many charts and summarises information from the previous steps.
 dials.report refined.expt refined.refl
 

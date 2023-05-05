@@ -27,5 +27,6 @@ There are 8 tutorials and 7 sub-tutorials, and should be followed in this order:
   - Dividing reciprocal space into voxels
 8. Altering .h5 files to NexusFormat
 
-  
+Note that all of the naming of files and directory setups are specific to the casestudy of magnetite at high temperatures. These naming conventions are subject to change. 
+Whenever a name of a folder or file is first introduced, it will be shown in caps. Feel free to change this name, but remember to stay consistent.
   

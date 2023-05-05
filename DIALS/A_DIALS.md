@@ -30,6 +30,7 @@ dials.reciprocal_space_viewer xds_models.expt
 dials.find_spots xds_models.expt 
 ```
 which will output the strong reflections (strong.refl)
+
 5. To assign a Miller index to every found spot, use the index function:
 ```
 dials.index xds_models.expt strong.refl 
@@ -38,6 +39,7 @@ dials.index xds_models.expt strong.refl
 - To be rigorous, make sure that the output here provides similar parameters to xds. 
 - output files are: indexed.expt and indexed.refl 
 - If the space group provided after indexing is still P1, then follow the sub steps below. If the space group is in accordance with your crystal, move on to refinement in step 6. 
+
 5b. To determine appropriate space group options refine the bravais lattice settings:
 ```
 dials.refine_bravais_settings indexed.expt indexed.refl 

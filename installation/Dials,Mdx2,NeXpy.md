@@ -1,9 +1,9 @@
-# Introduction to DIALS, Mdx2, NeXpy
+# Installing DIALS, Mdx2, NeXpy
 ### Tailored to users who aim to model inorganic materials using crystallographic software
 
 <details>
 <summary> DIALS </summary>
-DIALS is documented on the DIALS github (link). DIALS is software used for indexing, peak finding, scaling and various other functions found (link to DIALS page), it is run entirely from the command line and has a basic UI to view data. DIALS should be installed in a clean environment preferably containing Python 3.10 (DIALS functions best on 3.10). DIALS can be installed using a package manager such as conda:
+DIALS is documented on the [DIALS]([url](https://dials.github.io/index.html)) github. DIALS is software used for indexing, peak finding, scaling and various other functions found [here](https://dials.github.io/index.html)), it is run entirely from the command line and has a basic UI to view data. DIALS should be installed in a clean environment and runs best on Python 3.10. DIALS can be installed using a package manager such as conda:
   
   ```
 conda install -c conda-forge dials
@@ -32,7 +32,7 @@ This should output the installed version of mdx2.
 
 <details>
 <summary> NeXpy </summary>
-NeXpy is the GUI that accompanies Mdx2. NeXpy should be installed in a second environment running on python 3.9 (or the last stable release). NeXpy only processes files in a NexusFormat structure (.nxs). Hierarchal data formats such as .h5 can be converted to the NexusFormat using this (link) script
+NeXpy is the GUI that accompanies Mdx2. NeXpy should be installed in a second environment running on python 3.9 (or the last stable release). NeXpy only processes files in a NexusFormat structure (.nxs). Hierarchal data formats such as .h5 can be converted to the NexusFormat using this [script](https://github.com/cammdu/crystal-toolbox/blob/main/mdx2/h5_to_nexpy.md)
 NeXpy can be installed using conda:
 
    ```
